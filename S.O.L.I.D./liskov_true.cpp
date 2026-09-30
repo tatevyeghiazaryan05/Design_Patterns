@@ -25,7 +25,6 @@ public:
     }
 };
 
-// Միայն լողացողներ
 class SwimmingBird : public Bird {
 public:
     SwimmingBird(const std::string& name) : Bird(name) {}
