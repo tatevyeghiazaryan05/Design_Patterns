@@ -12,8 +12,9 @@ class ATMHandler {
     next = nullptr;
     }
 
-    void setNext(ATMHandler* handler) {
+    ATMHandler* setNext(ATMHandler* handler) {
         next = handler;
+        return handler;
     }
 
     ATMHandler* getNext() {
@@ -45,9 +46,7 @@ ATMHandler* second = new ATMHandler(20000);
 ATMHandler* third = new ATMHandler(10000);
 ATMHandler* fourth = new ATMHandler(5000);
 
-head->setNext(second);
-second->setNext(third);
-third->setNext(fourth);
+head->setNext(second)->setNext(third)->setNext(fourth);
 
 int amount = 85002;
 
